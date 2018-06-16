@@ -1,0 +1,26 @@
+ function moveleft() {
+         myGamePiece.speedX -= 5;
+     }
+
+     function moveright() {
+         myGamePiece.speedX += 5;
+     }
+
+     function stopMove() {
+         myGamePiece.speedX = 0;
+         myGamePiece.speedY = 0;
+     }
+
+     document.addEventListener('keydown', (event) => {
+         const keyName = event.key;
+
+     if (event.key == 'ArrowRight') {
+         moveright()
+     }
+     if (event.key == 'ArrowLeft') {
+         moveleft()
+     }
+     if (event.key == 'null') {
+         stopMove();
+     }
+     });
